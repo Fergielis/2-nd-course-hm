@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+.top {
+    height: 1024px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -7.35%, #000915 100%), url("img/fon\ head.jpg");
+}
+.heading__top {
+    padding-top: 217px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: #FFFFFF;
+}
+.heading__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    padding-top: 32px;
+}
+.go {
+    margin-top: 44px;
+    width: 234.06px;
+    height: 48.6px;
+    background: #EB443F;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    align-items: center;
+}
+.go:hover {
+    /* cursor: pointer; */
+    cursor: url("img/Vector.svg"), pointer;  
+}
+
+.game {
+    min-height: 556px;
+    background: #000915;
+}
+
+.game__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+}
+.game__item {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    width: 378px;
+    height: 300px;
+    display: flex;
+}
+.game__item:hover {
+    cursor: url("img/Vector.svg"), pointer;
+    border: 3px solid #44D2FF;
+    border-radius: 16px;
+}
+.game__item_1 {
+    background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(img/game1.jpg);
+    border-radius: 16px;
+}
+.game__item_2 {
+    background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(img/game2.jpg);
+    border-radius: 16px;
+}
+.game__item_3 {
+    background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(img/game3.jpg);
+    border-radius: 16px;
+}
+
+.game__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-decoration-line: none;
+    padding-top: 236px;
+    padding-left: 32px;
+}
