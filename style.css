@@ -74,6 +74,7 @@ body {
     width: 378px;
     height: 300px;
     display: flex;
+    box-sizing: border-box;
 }
 .game__item:hover {
     cursor: url("img/Vector.svg"), pointer;
