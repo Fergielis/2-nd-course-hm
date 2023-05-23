@@ -104,3 +104,46 @@ body {
     padding-top: 236px;
     padding-left: 32px;
 }
+
+
+@media (max-width: 425px) {
+.center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+.top {
+    height: 735px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading__top {
+    font-style: normal;
+    font-weight: 700;   
+    font-size: 32px;
+    line-height: 39px;
+    padding-top: 238px;
+    text-align: center;
+}
+.heading__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+}
+.go {
+    border: none;
+}
+.game__item {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    width: 343px;
+    height: 300px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+}
