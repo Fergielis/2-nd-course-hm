@@ -73,131 +73,186 @@
 
 // hw 2-3
 // 1
-let password = 'пароль';
-let answer = String(prompt('Введите пароль'));
-if (answer === password) {
-    alert('Пароль введен верно'); 
-} else {
-    alert('Пароль введен неправильно');
-}
+// let password = 'пароль';
+// let answer = String(prompt('Введите пароль'));
+// if (answer === password) {
+//     alert('Пароль введен верно'); 
+// } else {
+//     alert('Пароль введен неправильно');
+// }
 
 // 2
-let c = 18;
-if (c > 0 && c < 10) {
-    alert('Верно');
-} else {
-    alert('Неверно');
-}
+// let c = 18;
+// if (c > 0 && c < 10) {
+//     alert('Верно');
+// } else {
+//     alert('Неверно');
+// }
 
 // 3
-let d = 33;
-let e = 85;
-if (d > 100 || e > 100) {
-    console.log('right');
-} else {
-    console.log('wrong');
-}
+// let d = 33;
+// let e = 85;
+// if (d > 100 || e > 100) {
+//     console.log('right');
+// } else {
+//     console.log('wrong');
+// }
 
 // 4
-let a = "2";
-let b = "3";
-alert(parseInt(a) + parseInt(b));
+// let a = "2";
+// let b = "3";
+// alert(parseInt(a) + parseInt(b));
 
 // 5
-let monthNumber = 12;
-switch (monthNumber) {
-  case 1:
-    console.log("winter");
-    break;
-  case 2:
-    console.log("winter");
-    break;
-  case 3:
-    console.log("spring");
-    break;
-  case 4:
-    console.log("spring");
-    break;
-  case 5:
-    console.log("spring");
-    break;
-  case 6:
-    console.log("summer");
-    break;
-  case 7:
-    console.log("summer");
-    break;
-  case 8:
-    console.log("summer");
-    break;
-  case 9:
-    console.log("autumn");
-    break;
-  case 10:
-    console.log("autumn");
-    break;
-  case 11:
-    console.log("autumn");
-    break;
-  case 12:
-    console.log("winter");
-    break;
-  default: monthNumber >= 13;
-    console.log("wrong number of month");
-    break;
-}
+// let monthNumber = 12;
+// switch (monthNumber) {
+//   case 1:
+//     console.log("winter");
+//     break;
+//   case 2:
+//     console.log("winter");
+//     break;
+//   case 3:
+//     console.log("spring");
+//     break;
+//   case 4:
+//     console.log("spring");
+//     break;
+//   case 5:
+//     console.log("spring");
+//     break;
+//   case 6:
+//     console.log("summer");
+//     break;
+//   case 7:
+//     console.log("summer");
+//     break;
+//   case 8:
+//     console.log("summer");
+//     break;
+//   case 9:
+//     console.log("autumn");
+//     break;
+//   case 10:
+//     console.log("autumn");
+//     break;
+//   case 11:
+//     console.log("autumn");
+//     break;
+//   case 12:
+//     console.log("winter");
+//     break;
+//   default: monthNumber >= 13;
+//     console.log("wrong number of month");
+//     break;
+// }
 
 // 6
 // done
 
 // 7
-let a = prompt("Пожалуйста, введите любое число");
-if (isNaN(a)) {
-    console.log('not a number')
-} else {
-    console.log('is number')
-}
-if (a % 2 === 0) {
-    alert('четное')
-} else {
-    alert('нечетное');  
-}
+// let a = prompt("Пожалуйста, введите любое число");
+// if (isNaN(a)) {
+//     console.log('not a number')
+// } else {
+//     console.log('is number')
+// }
+// if (a % 2 === 0) {
+//     alert('четное')
+// } else {
+//     alert('нечетное');  
+// }
 
 // 8
-let clientOS = prompt("Введите цифру вашей операционной системы 0 — iOS, 1 — Android");
-if (clientOS == 0) {
-    console.log("Установите версию приложения для iOS по ссылке");
-} else {
-    console.log("Установите версию приложения для Android по ссылке");
-}
+// let clientOS = prompt("Введите цифру вашей операционной системы 0 — iOS, 1 — Android");
+// if (clientOS == 0) {
+//     console.log("Установите версию приложения для iOS по ссылке");
+// } else {
+//     console.log("Установите версию приложения для Android по ссылке");
+// }
 
 // 9
-let clientOS = prompt("Введите цифру вашей операционной системы 0 — iOS, 1 — Android");
-let clientDeviceYear = prompt('Год выпуска вашей операционной системы ранее 2015 года? 0 - да, 1 - нет')
+// let clientOS = prompt("Введите цифру вашей операционной системы 0 — iOS, 1 — Android");
+// let clientDeviceYear = prompt('Год выпуска вашей операционной системы ранее 2015 года? 0 - да, 1 - нет')
 
-if (clientOS == 0) {
-    if (clientOS == 0 && clientDeviceYear == 1) {
-      console.log("Установите версию приложения для iOS по ссылке");
-    } else {
-      console.log("Установите облегченную версию приложения для iOS по ссылке");
-    }
-} else {
-    if (clientOS == 1 && clientDeviceYear == 1) {
-        console.log("Установите версию приложения для Android по ссылке");
-    } else {
-        console.log("Установите облегченную версию приложения для Android по ссылке");
-    }
+// if (clientOS == 0) {
+//     if (clientOS == 0 && clientDeviceYear == 1) {
+//       console.log("Установите версию приложения для iOS по ссылке");
+//     } else {
+//       console.log("Установите облегченную версию приложения для iOS по ссылке");
+//     }
+// } else {
+//     if (clientOS == 1 && clientDeviceYear == 1) {
+//         console.log("Установите версию приложения для Android по ссылке");
+//     } else {
+//         console.log("Установите облегченную версию приложения для Android по ссылке");
+//     }
     
+// }
+
+
+// hw 2.4
+// practice
+// Напишите программу, которая будет выводить в консоль сообщения пользователя, введенные через prompt, пока пользователь не введет break. Если пользователь введёт в prompt continue, то в консоль ничего не нужно выводить, а пользователь должен продолжить вводить сообщения.
+
+// while (true) {
+//     const msg = prompt('write your message')
+//     if (msg === 'continue') {
+//         continue;
+//     }
+//     console.log(msg);
+//     if (msg === 'break') {
+//         break;
+//     }
+// }
+
+// 1
+let a = 0;
+while (a < 2) {
+    console.log('hello');
+    a++;  
 }
 
+// 2
+let b = 1;
+while (b < 6) {
+    console.log(b);
+    b++;
+}
 
+// 3
+let c = 7;
+while (c < 23) {
+    console.log(c);
+    c++;
+}
 
+// 4
+const obj = {
+    Коля: '200',
+    Вася: '300',
+    Петя: '400',
+}
+for (const name in obj) {
+    console.log(`${name} - зарплата ${obj[name]} долларов`)
+}
 
+// 5
+let n = 1000;
+let num = 0;
+while(n >= 50) {
+    n = n/2;
+    num++;
+}
+console.log(`количество итераций ${num}`);
 
-
-
-
-
+// 6
+for (let dayNumber = 1; dayNumber <= 31; dayNumber++) {
+  let friday = 5;
+  if (dayNumber % 7 == 5) {
+    console.log(`Сегодня пятница, ${dayNumber}-е число. Необходимо подготовить отчет.`);
+  }
+}
 
 
 
