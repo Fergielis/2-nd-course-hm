@@ -33,13 +33,16 @@ body {
     font-size: 18px;
     line-height: 32px;
     color: #FFFFFF;
+}
+.heading__text_top {
     padding-top: 32px;
 }
-.go {
-    margin-top: 44px;
+
+.button {
+    /* margin-top: 44px; */
     width: 234.06px;
     height: 48.6px;
-    background: #EB443F;
+    background: #9C0332;
     border-radius: 30px;
     color: #FFFFFF;
     font-family: 'Montserrat';
@@ -49,9 +52,11 @@ body {
     line-height: 22px;
     align-items: center;
 }
-.go:hover {
-    /* cursor: pointer; */
+.button:hover {
     cursor: url("img/Vector.svg"), pointer;  
+}
+.button_go {
+    margin-top: 44px;
 }
 
 .game {
@@ -64,6 +69,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 32px;
+    padding-bottom: 128px;
 }
 .game__item {
     font-style: normal;
@@ -105,6 +111,34 @@ body {
     padding-left: 32px;
 }
 
+/* game time of year */
+.gameTimeOfYear {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 135px;
+    padding-top: 282px;
+    padding-bottom: 282px;
+}
+
+.gameTimeOfYear__box {
+    width: 584px;
+}
+.heading__game {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
+.heading__text_game {
+    padding-top: 32px;
+}
+.button_play {
+    margin-top: 32px;
+}
+
 
 @media (max-width: 425px) {
 .center {
@@ -131,8 +165,11 @@ body {
     line-height: 22px;
     text-align: center;
 }
-.go {
+.button {
     border: none;
+}
+.game__box {
+    padding-bottom: 0;
 }
 .game__item {
     font-style: normal;
@@ -146,4 +183,26 @@ body {
     box-sizing: border-box;
 }
 
+.gameTimeOfYear {
+    padding-top: 178px;
+    display: flex;
+    justify-content: center;
+    row-gap: 0;
+}
+.gameTimeOfYear__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 343px;
+}
+.heading__game {
+    text-align: center;
+}
+.gameTimeOfYear__draw {
+    padding-top: 64px;
+}
+.picture {
+    width: 344px;
+    height: 236px;
+}
 }
