@@ -432,6 +432,8 @@
 //         break;
 //     }
 // }
+// 
+// или
 
 function timeOfYear() {
     let monthNumber = prompt("Введите число от 1 до 12");
@@ -448,6 +450,137 @@ function timeOfYear() {
         console.log('неправильное число');
     }
 }
+
+
+// 2.6
+// практика
+// const newspaper = {
+//     sports: {
+//         title: "ARod Hits Home Run",
+//         sportsWriters: ["Miramon Nuevo", "Rick Reilly", "Woddy Paige"],
+//     },
+//     business: {
+//         title: "GE Stock Dips Again",
+//         businessWriters: ["Adam Smith", "Albert Humphrey", "Charles Handy"],
+//     }
+//     movies: {
+//         title: "Superman Is A Flop",
+//         moviesWriters: ["Rogert Ebert", "Andrew Sarris", "Wesley Morris"],
+//     }
+// };
+
+// newspaper.sports.title; 
+// ARod Hits Home Run
+// newspaper.business.writers[0]; 
+// Adam Smith
+// newspaper['movies']['title']; 
+// Superman Is A Flop
+
+
+
+// 1
+// let a = [1, 5, 4, 10, 0, 3];
+// for (let i = 0; i < a.length; i++) {
+//     if (a[i] == 0) break;
+//     console.log(a[i]);
+// }
+// почему здесь не работает условие a[i] <= 10? (не выводит 10, как нужно в условии)
+
+// 2
+// let b = [1, 5, 4, 10, 0, 3];
+// b.forEach ((el,index) => {
+//     if (el == 4) {
+//        console.log(`${el} : ${index}`); 
+//     }
+// });
+
+// 3
+// let c = [1, 3, 5, 10, 20];
+// c = c.join(' ');
+// console.log(c);
+
+// 4
+// let d = [];
+// for (let i = 0; i < 3; i++) {
+//     d[i] = [];
+//     for (let j = 0; j < 3; j++) {
+//         d[i].push(1);
+//     } 
+// }
+// console.log(d);
+
+// 5
+// let e = [1, 1, 1];
+// e.push(2, 2, 2);
+// console.log(e);
+
+// 6
+// let f = [9, 8, 7, "a", 6, 5];
+// f = f.sort();
+// let newArray = f.filter(item => Number(item));
+// console.log(newArray);
+
+// 7
+// let g = [9, 8, 7, 6, 5];
+// let userNumber = Number(prompt('Введите числоот 1 до 10'));
+// let search = g.includes(userNumber);
+// console.log(search);
+
+// 8
+// let h = 'abcdef';
+// h = h.split('').reverse().join('');
+// console.log(h);
+
+// 9
+// let k = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+// ];
+// k = k.join(',');
+// console.log(k);
+
+// 10
+// let l = [8, 3, 7, 1, 5, 9, 2, 4, 6];
+// for (let i = 0; i < l.length - 1; i++) {
+//     let sum = l[i] + l[i+1];
+//     console.log(sum);
+// };
+
+// 11
+// const m = [ 85, 9, 63, 4, 7, 20, 15];
+// let result = m.map(item => (item**2));
+// console.log(result);
+
+// 12
+// const getLengthWords = ['слово', '', 'слог', 'длинное предложение', 'буква'];
+// const lengthWords = getLengthWords.map(getLengthWords => getLengthWords.length);
+// console.log(lengthWords);
+
+// 13
+// function filterPositive(array) {
+//     let result = array.filter(item => item < 0);
+//     return result;
+// };
+// console.log(filterPositive([-1, 0, 5, -10, 56]));
+// console.log(filterPositive([-25, 25, 0, -1000, -2]));
+
+// 14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
