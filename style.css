@@ -139,6 +139,21 @@ body {
     margin-top: 32px;
 }
 
+/*game remember words */
+
+.gameRememberWords {
+    padding-top: 240px;
+    padding-bottom: 242px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 149px;
+}
+.gameRememberWords__box {
+    width: 588px;
+    padding-top: 40px;
+}
+
 
 @media (max-width: 425px) {
 .center {
@@ -185,6 +200,7 @@ body {
 
 .gameTimeOfYear {
     padding-top: 178px;
+    padding-bottom: 85px;
     display: flex;
     justify-content: center;
     row-gap: 0;
@@ -205,4 +221,24 @@ body {
     width: 344px;
     height: 236px;
 }
+.gameRememberWords {
+    padding-top: 51px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    row-gap: 0;
+}
+.gameRememberWords__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 343px;
+}
+.gameRememberWords__draw {
+    padding-top: 64px;
+}
+.heading__game_rememberWords {
+    padding-top: 0;
+}
+
 }

@@ -313,25 +313,6 @@
 // console.log(result2);
 
 // 4
-// 'use strict';
-// let age = prompt('How old are you?');
-// let printMessage;
-// if (age < 0) {
-//     function printMessage() {
-//         alert('wrong number');
-//     }
-// } else if (age >= 0 && age <= 12) {
-//     function printMessage() {
-//         alert('Hello, friend!');
-//     }
-// } else {
-//     function printMessage() {
-//         alert('Welcome!');
-//     }
-// }
-// printMessage();
-// почему не работает код выше?
-
 // let age = prompt('how old are you?');
 
 // function checkAge(age) {
@@ -349,7 +330,7 @@
 // let userNum = prompt('write number');
 // let userNum2 = prompt('write second number');
 // function mult(userNum, userNum2) {
-//     if (isNaN(userNum) && isNaN(userNum2)) {
+//     if (isNaN(userNum) || isNaN(userNum2)) {
 //         return "Одно или оба значения не являются числом";
 //     } else {
 //         return userNum * userNum2;
@@ -358,14 +339,14 @@
 // console.log(mult(userNum, userNum2));
 
 // function mult2(a, b) {
-//     if (isNaN(a) && isNaN(b)) {
+//     if (isNaN(a) || isNaN(b)) {
 //         return "Одно или оба значения не являются числом";
 //     } else {
 //         return a * b;
 //     }
 // }
-// console.log(mult2(5, р));
-// почему не работает с буквенным значением в этом варианте?
+// console.log(mult2(5, 'р'));
+
 
 // 6
 // function cubeNumber() {
@@ -435,21 +416,28 @@
 // 
 // или
 
-function timeOfYear() {
-    let monthNumber = prompt("Введите число от 1 до 12");
-    if (monthNumber == 1 || monthNumber == 2 || monthNumber == 12) {
-        console.log('зима');
-    } else if (monthNumber >= 3 && monthNumber <= 5) {
-        console.log('весна');
-    } else if (monthNumber >= 6 && monthNumber <= 8) {
-        console.log('лето');
-    } else if (monthNumber >= 9 && monthNumber <= 11)
-    {
-        console.log('осень');
-    } else {
-        console.log('неправильное число');
-    }
-}
+// function timeOfYear() {
+//     let monthNumber = prompt("Введите число от 1 до 12");
+//     if (monthNumber == 1 || monthNumber == 2 || monthNumber == 12) {
+//         alert('зима');
+//     } else if (monthNumber >= 3 && monthNumber <= 5) {
+//         alert("весна");
+//     } else if (monthNumber >= 6 && monthNumber <= 8) {
+//         alert("лето");
+//     } else if (monthNumber >= 9 && monthNumber <= 11)
+//     {
+//         alert("осень");
+//     } else {
+//         alert("неправильное число");
+//     }
+// };
+
+
+
+
+
+
+
 
 
 // 2.6
@@ -481,10 +469,9 @@ function timeOfYear() {
 // 1
 // let a = [1, 5, 4, 10, 0, 3];
 // for (let i = 0; i < a.length; i++) {
-//     if (a[i] == 0) break;
 //     console.log(a[i]);
+//     if (a[i] == 10) break;
 // }
-// почему здесь не работает условие a[i] <= 10? (не выводит 10, как нужно в условии)
 
 // 2
 // let b = [1, 5, 4, 10, 0, 3];
@@ -536,7 +523,7 @@ function timeOfYear() {
 //   [1, 2, 3],
 //   [4, 5, 6],
 // ];
-// k = k.join(',');
+// k = k.join(',').split();
 // console.log(k);
 
 // 10
@@ -576,7 +563,145 @@ function timeOfYear() {
 
 
 
+// 2-7
+// пример
+// const currentDate = new Date();
+// const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+// console.log(currentDate.toLocaleDateString('ru-RU', options)); 
 
+
+// let currentDate = new Date();
+// console.log(currentDate.toLocaleTimeString("ru-RU"));
+
+// 1
+// let lowerCase = 'js';
+// let upperCase = lowerCase.toUpperCase();
+// console.log(upperCase);
+
+// 2
+// const things = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+// const search = 'ко';
+// let arr = [];
+// things.forEach((things) => {
+//     if (things.toLowerCase().startsWith(search.toLowerCase())) {
+//         arr.push(things);
+//     }
+// });
+// console.log(arr);
+// 3
+// let number = '32.58884';
+// console.log(Math.floor(number));
+// console.log(Math.ceil(number));
+// console.log(Math.round(number));
+
+// 4
+// console.log(Math.max(52, 53, 49, 77, 21, 32));
+// console.log(Math.min(52, 53, 49, 77, 21, 32));
+
+// 5
+// function getRandomInt(minValue, MaxValue) {
+//     return Math.round(Math.random() * (MaxValue - minValue)) + minValue;
+// };
+// console.log(getRandomInt(1, 10));
+
+// 6
+// function getRandomArrNumbers(n) {
+//     const result = [];
+//     const length = Math.floor(n / 2);
+
+//     for (let i = 0; i < length; i++) {
+//         result.push(Math.round(Math.random() * (n + 1)));
+//     }
+
+//     return result;
+// }
+// console.log(getRandomArrNumbers(7));
+
+// 7
+// function getNumber(firstNumber, secondNumber) {
+//     return Math.round(Math.random() * (firstNumber - secondNumber) + secondNumber);
+// }
+
+// console.log(getNumber(85, 52));
+
+// 8
+// let currentDate = new Date();
+// console.log(currentDate);
+
+// 9
+// let currentDate = new Date();
+// let futureDate = currentDate;
+// futureDate.setDate(currentDate.getDate() + 73);
+// console.log(futureDate);
+
+// 10
+// const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+// const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+
+// let myDate = new Date();
+// let ruDate = 'Дата: ' + myDate.getDate() + ' ' + months[myDate.getMonth()] + ' ' + myDate.getFullYear() + ' - это ' + days[myDate.getDay()];
+// let time = 'Время: ' + myDate.getHours() + ':' + myDate.getMinutes() + ':' + myDate.getSeconds();
+// console.log(ruDate);
+// console.log(time);
+
+// или с функцией
+
+// let myDate = new Date();
+
+// function ruDate(myDate) {
+
+//     const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+//     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+
+//     let date = "Дата: " + myDate.getDate() +
+//     " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + " - это " +
+//     days[myDate.getDay()];
+
+//     let time = "Время: " + myDate.getHours() +
+//     ":" + myDate.getMinutes() + ":" + myDate.getSeconds();
+
+//     return date + time;
+// }
+// console.log(ruDate);
+// как вывести в консоль корректно функцию?
+
+// 11
+// let words = ["Яблоко", "Груша", "Дыня", "Виноград", "Персик", "Апельсин", "Мандарин"];
+
+// let list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+// let list = ["Яблоко", "Груша", "Дыня", "Виноград", "Персик", "Апельсин", "Мандарин"];
+// list = list.sort(() => Math.random() - 0.5);
+
+// console.log(list);
+
+// prompt("Какой фрукт был первым?");
+// prompt("Какой фрукт был последним?");
+// "Поздравляю, Вы ответили верно!"
+// "Вы были близки к победе!"
+// "Вы ответили неверно:("
+
+function rememberWords() {
+    let list = ["Яблоко", "Груша", "Дыня", "Виноград", "Персик", "Апельсин", "Мандарин"];
+    list = list.sort(() => Math.random() - 0.5);
+
+    alert(list);
+
+    let firstWord = prompt("Какой фрукт был первым?");
+    let secondWord = prompt("Какой фрукт был последним?");
+    
+    if (list[0].toLocaleLowerCase === firstWord.toLocaleLowerCase() && list[6].toLocaleLowerCase === secondWord.toLocaleLowerCase()) {
+    alert("Поздравляю, Вы ответили верно!")
+    } else if (list[0].toLocaleLowerCase === firstWord.toLocaleLowerCase() || list[6].toLocaleLowerCase === secondWord.toLocaleLowerCase()) {
+    // alert("Вы были близки к победе!");
+    console.log("Вы были близки к победе!");
+    } else {
+    // alert("Вы ответили неверно:(");
+    console.log("Вы ответили неверно:(");
+  }
+};
+// почему у меня не работает?
 
 
 
