@@ -588,6 +588,35 @@
 //     }
 // });
 // console.log(arr);
+
+// функция
+
+const myArr = ["Кошка", "Кит", "Комар", "Носорог"];
+const string1 = 'ко';
+let arr = [];
+
+function words(arr, slog) {
+  return arr.toLowerCase().startsWith(string.toLowerCase());
+}
+let result = words(myArr, string1);
+console.log(result)
+
+
+
+
+// const myArr = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+// const filteredArr = words(myArr, "ко");
+const string = 'ко';
+
+
+function words(arr, string) {
+    const filteredArr = arr.filter(item => item.startsWith(string));
+    return filteredArr;
+};
+const filteredArr = words(myArr, "ко");
+console.log(filteredArr);
+
+
 // 3
 // let number = '32.58884';
 // console.log(Math.floor(number));
@@ -706,7 +735,232 @@ function rememberWords() {
 
 
 
+// 2.8
+// практика
+// const fibonacci = [1, 1, 2, 3, 5, 8];
+// // TODO: Допишите код, чтобы в консоль ниже выводились правильные значения
 
+// // Используйте метод map, чтобы получить массив fibonacci, в котором все числа умножены на 2
+// const multipleByTwoFib = fibonacci.map(item => (item * 2));
+// console.log(multipleByTwoFib);
+// // Используйте метод map, чтобы получить массив fibonacci, в котором к каждому числу добавили 10
+// const plusTenFib = fibonacci.map(item => (item +10));
+// // Используйте метод filter, чтобы получить массив, в который входят числа Фибоначчи больше 3
+// const onlyBigFib = fibonacci.filter(item => item > 3);
+
+// console.log(multipleByTwoFib); // => [2, 2, 4, 6, 10, 16]
+// console.log(plusTenFib); // => [11, 11, 12, 13, 15, 18]
+// console.log(onlyBigFib); // => [5, 8]
+
+// const fibonacci = [1, 1, 2, 3, 5, 8];
+
+// const multipleByTwoFib = fibonacci.map((number) => number * 2);
+// const plusTenFib = fibonacci.map((number) => number + 10);
+// const onlyBigFib = fibonacci.filter((number) => number > 3);
+
+// console.log(multipleByTwoFib); // => [2, 2, 4, 6, 10, 16]
+// console.log(plusTenFib); // => [11, 11, 12, 13, 15, 18]
+// console.log(onlyBigFib); // => [5, 8]
+
+
+// с помощью callback
+// console.log(map([1, 1, 2, 3, 5, 8], (number) => number * 2)); // => [2, 2, 4, 6, 10, 16]
+// console.log(map([1, 1, 2, 3, 5, 8], (number) => number + 10)); // => [11, 11, 12, 13, 15, 18]
+
+// function callbackWithArrayLength(arr, callback) {
+//   console.log(arr);
+//   /* Писать код тут */
+//   callback(arr.length);
+// }
+
+// callbackWithArrayLength([1], (length) => {
+//   console.log(length);
+// });
+
+// callbackWithArrayLength([1, 1], (len) => {
+//   console.log(len);
+// });
+// callbackWithArrayLength([1, 1, 1, 1, 1], (l) => {
+//   console.log(l);
+// });
+
+
+// function log(arrItem) {
+//   console.log("Элемент массива:", arrItem);
+// }
+
+// function each(arr, cb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     cb(arr[i]);
+//   }
+// }
+
+// each(["Глеб", "Олег", "Татьяна", "Платон"], log);
+
+// ловушки
+
+// function square(number) {
+//   return number * number;
+// }
+
+// function map(arr, ruleFunction) {
+//   const output = [];
+
+// 	// Добавил в консоль лог для отладки
+// 	console.log('ruleFunction', ruleFunction);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(ruleFunction(arr[i]));
+//   }
+
+//   return output;
+// }
+
+// // ОШИБКА: написано square() вместо square
+// console.log(map([1, 4, 9, 16], square())); // => Uncaught TypeError: ruleFunction is not a function
+
+// Убрали скобки
+// console.log(map([1, 4, 9, 16], square)); // => [ 1, 16, 81, 256 ]
+
+
+// function add(number1, number2) {
+//   return number1 + number2;
+// }
+
+// function map(arr, ruleFunction) {
+//   const output = [];
+
+//   // Добавил консоль лог для отладки
+//   console.log("ruleFunction", ruleFunction);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     output.push(ruleFunction(arr[i]));
+//   }
+
+//   return output;
+// }
+// // Функция map вызывает колбэк с одним аргументом, получается вызов add(arr[i]),
+// // Такой вызов вернет NaN, потому что попытается сложить число с undefined
+// console.log(map([1, 4, 9, 16], add)); // => [ NaN, NaN, NaN, NaN ]
+// // Такая же проблема, как в предыдущей ошибке
+// console.log(map([1, 4, 9, 16], add(10))); // => Uncaught TypeError: ruleFunction is not a function
+
+// Добавим функцию-обертку, которая «синхронизирует» функцию add с колбэком, который ожидает map-функция
+// console.log(
+//   map([1, 4, 9, 16], (item) => {
+//     return add(10, item);
+//   })
+// ); // => [ 11, 14, 19, 26 ]
+
+
+
+// 2-8
+
+// 1
+// const people = [
+//   { name: "Глеб", age: 29 },
+//   { name: "Анна", age: 17 },
+//   { name: "Олег", age: 7 },
+//   { name: "Оксана", age: 47 },
+// ];
+
+// people.sort(function (a, b) {
+//   return a.age - b.age;
+// });
+// console.log(people);
+
+// сравнивает соседние элементы
+// или
+
+// function compareAge(a, b) {
+//   return a.age - b.age;
+// }
+// console.log(people.sort(compareAge));
+
+// 2
+// function isPositive(number) {
+//   if (number > 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// const people = [
+//   { name: "Глеб", gender: "male" },
+//   { name: "Анна", gender: "female" },
+//   { name: "Олег", gender: "male" },
+//   { name: "Оксана", gender: "female" },
+// ];
+
+// function isMale(gender) {
+//   if (gender == "male") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+
+// function filter(arr, ruleFunction) {
+//   const output = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const isValidEl = ruleFunction(arr[i]);
+//     if (isValidEl) {
+//       output.push(arr[i]);
+//     } 
+//   }
+//   return output;
+// }
+
+
+// console.log(filter([3, -4, 1, 9], isPositive)); 
+
+// console.log(filter(people, isMale));
+
+// arr[i] это элемент массива
+// is возвращает true or false
+ 
+
+// 3
+// let currentDate = new Date();
+
+// let timerId = setInterval(() => {
+//   alert(currentDate);
+// }, 3000);
+
+// setInterval(() => {
+//   clearInterval(timerId);
+//   alert("30 секунд прошло");
+// }, 30000);
+
+
+// 4
+// function delayForSecond(callback) {
+//   setTimeout(callback, 10000);
+// }
+
+// delayForSecond(function() {
+//   console.log("Привет, Глеб!");
+// });
+
+
+// 5
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+				if(cb) { 	
+          cb(); 
+        }
+    }, 1000)
+}
+
+function sayHi(name) {
+    console.log(`Привет, ${name}!`);
+}
+
+delayForSecond(() => sayHi("Глеб"));
 
 
 
